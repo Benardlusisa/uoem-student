@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 10, 2022 at 04:37 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.1
+-- Generation Time: Nov 14, 2023 at 01:17 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,7 +31,7 @@ CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `admin`
@@ -52,7 +52,7 @@ CREATE TABLE `attn` (
   `st_id` int(11) NOT NULL,
   `atten` varchar(50) NOT NULL,
   `at_date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `attn`
@@ -77,7 +77,14 @@ INSERT INTO `attn` (`id`, `st_id`, `atten`, `at_date`) VALUES
 (221, 14103053, 'absent', '2021-06-06'),
 (222, 14203072, 'absent', '2021-06-06'),
 (223, 1454540, 'present', '2021-06-06'),
-(224, 17699619, 'present', '2021-06-06');
+(224, 17699619, 'present', '2021-06-06'),
+(225, 12103072, 'present', '2021-12-12'),
+(226, 13103072, 'present', '2021-12-12'),
+(227, 13203072, 'present', '2021-12-12'),
+(228, 14103053, 'present', '2021-12-12'),
+(229, 14203072, 'present', '2021-12-12'),
+(230, 1454540, 'present', '2021-12-12'),
+(231, 17699619, 'present', '2021-12-12');
 
 -- --------------------------------------------------------
 
@@ -89,20 +96,7 @@ CREATE TABLE `at_student` (
   `id` int(11) NOT NULL,
   `name` varchar(40) NOT NULL,
   `st_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `at_student`
---
-
-INSERT INTO `at_student` (`id`, `name`, `st_id`) VALUES
-(29, 'Robert Speer', 12103072),
-(30, 'Mariea Moore', 13103072),
-(31, 'Pamela A Reed', 13203072),
-(32, 'Stephen D Skaggs', 14103053),
-(33, 'Evelyn K Ambrose', 14203072),
-(34, 'Bruno Den', 1454540),
-(35, 'Amy Billington', 17699619);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -121,7 +115,7 @@ CREATE TABLE `faculty` (
   `education` varchar(100) DEFAULT NULL,
   `contact` int(100) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `faculty`
@@ -143,7 +137,7 @@ CREATE TABLE `result` (
   `marks` int(5) NOT NULL,
   `sub` varchar(50) NOT NULL,
   `semester` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `result`
@@ -189,7 +183,20 @@ INSERT INTO `result` (`id`, `st_id`, `marks`, `sub`, `semester`) VALUES
 (66, 17699619, 87, 'English', '1st'),
 (67, 17699619, 70, 'Physics', '1st'),
 (68, 17699619, 75, 'Chemistry', '1st'),
-(69, 17699619, 70, 'Psychology', '1st');
+(69, 17699619, 70, 'Psychology', '1st'),
+(70, 1234, 80, 'DBMS', '1st'),
+(71, 1234, 78, 'Mathematics', '1st'),
+(72, 2345, 73, 'Programming', '2nd'),
+(73, 2345, 76, 'DBMS Lab', '1st'),
+(74, 2345, 87, 'Programming', '1st'),
+(75, 1234, 88, 'SIT 413', '1st'),
+(76, 2345, 57, 'SIT 411', '1st'),
+(77, 1234, 88, 'Programming', '2nd'),
+(78, 1234, 99, 'SIT 415', '2nd'),
+(79, 1234, 78, 'SIT 414', '2nd'),
+(80, 2020, 89, 'SIT 411', '1st'),
+(81, 2020, 78, 'DBMS', '1st'),
+(82, 2020, 90, 'SIT 412', '1st');
 
 -- --------------------------------------------------------
 
@@ -208,28 +215,16 @@ CREATE TABLE `st_info` (
   `gender` varchar(10) NOT NULL,
   `address` varchar(255) NOT NULL,
   `img` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `st_info`
 --
 
 INSERT INTO `st_info` (`st_id`, `name`, `password`, `email`, `bday`, `program`, `contact`, `gender`, `address`, `img`) VALUES
-(123456, 'jude', '202cb962ac59075b964b07152d234b70', 'suarez081119@gmail.com', '1996-02-11', 'BSIT', '09272777334', 'Male', 'Himamaylan City', 'B64E6E3F-AA1E-952B-2A9B-63CAB288381D.jpg'),
-(12103072, 'Robert Speer', '250cf8b51c773f3f8dc8b4be867a9a02', 'robert@gmail.com', '1995-10-10', 'BIT', '7548884541', 'male', '950  Leo Street', 'F34FEDE2-0BE0-400A-82CC-2FCC984A21C4.png'),
-(13103072, 'Mariea Moore', '123', 'moremar@mail.com', '1995-10-10', 'BIT', '2457778450', 'female', '3983  Burnside Avenue', '7E230FB0-C157-4544-B270-97F3C8FDB1AA.png'),
-(13203072, 'Pamela A Reed', '123', 'reedpar@mail.com', '1995-10-10', 'MsCIT', '4570002480', 'female', '2526  Riverwood Drive', '20DE853C-35DC-4D91-BB0F-BBAEB2388294.png'),
-(14103053, 'Stephen D Skaggs', '202cb962ac59075b964b07152d234b70', 'stephensk@mail.com', '1996-08-09', 'MIT', '97410000002', 'Male', '2684  Linden Avenue', 'FB637BF3-101A-4B7F-B365-5645CDF14AE4.png'),
-(14203072, 'Evelyn K Ambrose', '123', 'ambrose@mail.com', '1995-10-10', 'BCSE', '3457854445', 'female', '1568  Sugar Camp Road', 'A048670B-178D-4D31-B802-B5B7DBF00E78.png'),
-(15103023, 'Gail A Jones', '202cb962ac59075b964b07152d234b70', 'jonesgail@mail.com', '1996-08-09', 'BsCIT', '7541112450', 'Male', '3444  Tree Top Lane', 'FFE697B5-F021-41FA-8267-53496890A002.png'),
-(15103033, 'Sam Wilson', '202cb962ac59075b964b07152d234b70', 'wilsons@mail.com', '1996-08-09', 'MIT', '2145785550', 'Male', '292  Canis Heights Drive', 'C6F031D6-2249-4CDC-B513-DC16D9F2325E.png'),
-(15103052, 'Sam A Ramirez', '123', 'ramirez@mail.com', '1995-10-10', 'BCSE', '8542145780', 'Male', '272  Shady Pines Drive', 'C9E6BD3E-8306-4385-BFE1-517DF1ACC505.png'),
-(15103053, 'Thomas Bryant', '202cb962ac59075b964b07152d234b70', 'thoyant@mail.com', '1996-08-09', 'BIT', '1547854555', 'Male', '1937  Chapmans Lane', '70C5DB91-B97E-44D0-9B5D-298105F3FBE4.png'),
-(15103057, 'Timothy Wilcher', '347602146a923872538f3803eb5f3cef', 'timothy@gmail.com', '1996-04-12', 'BIT', '7547854650', 'Male', '3435  Cabell Avenue', '0AD69827-DDEF-485F-8721-E18F29C9A1DE.png'),
-(15103058, 'Bruno Den', '202cb962ac59075b964b07152d234b70', 'brunoden@gmail.com', '1996-10-28', 'MIT', '3124578450', 'Male', '919  Winding Way', '94E5BBB2-A0FF-4F19-BA12-C07F0C4C617A.png'),
-(15103092, 'Rachel Johnson', '123', 'rachhel@mail.com', '1995-10-10', 'BCSE', '3457856969', 'female', '919  Winding Way', '2112827E-7215-4CB3-BC87-590B2B848955.png'),
-(16303053, 'Emma Farrell', '202cb962ac59075b964b07152d234b70', 'emmafck6@mail.com', '1996-08-09', 'MIT', '7531598520', 'female', '431  Clover Drive', 'F6417D01-7D58-406A-B781-867ED93BACC0.png'),
-(17699619, 'Amy Billington', '5f4dcc3b5aa765d61d8327deb882cf99', 'amy@gmail.com', '1995-04-01', 'BIT', '7410000058', 'Female', '2825 Alpaca Way', 'E2EB3AB3-379F-49E2-A558-E7CE535778A0.png');
+(1234, 'Benard', '81dc9bdb52d04dc20036dbd8313ed055', 'Benard@gmail.com', '1997-11-23', 'BSC IT', '0719316535', 'Male', '23/45', 'C625C048-EB9F-F53E-B829-D2BBA63B635C.png'),
+(2030, 'Victor ', '2d579dc29360d8bbfbb4aa541de5afa9', 'kemoda@gmail.com', '1998-09-12', 'BCSE', '0712345678', 'Male', '23', NULL),
+(2345, 'Mercy mwende', '81b073de9370ea873f548e31b8adc081', 'mwende@gmail.com', '2001-06-24', 'BSC IT', '0712345678', 'Female', '20-60100', '36F84E6C-2E97-2731-AE69-6E447757BB5E.png');
 
 --
 -- Indexes for dumped tables
@@ -280,7 +275,7 @@ ALTER TABLE `st_info`
 -- AUTO_INCREMENT for table `attn`
 --
 ALTER TABLE `attn`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=225;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=232;
 
 --
 -- AUTO_INCREMENT for table `at_student`
@@ -298,7 +293,7 @@ ALTER TABLE `faculty`
 -- AUTO_INCREMENT for table `result`
 --
 ALTER TABLE `result`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

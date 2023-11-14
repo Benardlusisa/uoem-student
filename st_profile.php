@@ -15,7 +15,7 @@ $pageTitle = "Student Profile";
 include "php/headertop.php";
 ?>
 <div class="profile">
-		<p style="font-size:18px;text-align:center;background:#1abc9c;color:#fff;padding:10px;margin:0">Welcome : <?php $user->getusername($sid); ?> <i class="fa fa-check-circle" aria-hidden="true"></i></p>
+		<p style="font-size:18px;text-align:center;background: brown;color:#fff;padding:10px;margin:0">Welcome : <?php $user->getusername($sid); ?> <i class="fa fa-check-circle" aria-hidden="true"></i></p>
 		<table class="tab_one">
 			<?php
 				$getuser = $user->getuserbyid($sid);

@@ -24,7 +24,7 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <header class="container header_area" style="background-color: skyblue">
+        <header class="container header_area" style="background-color: brown">
 			<div id="sticker">
 				<div class="head">
 					<!-- <a href="#               "><div class="logo fix">

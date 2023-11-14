@@ -15,8 +15,8 @@ if($user->get_admin_session()){
 ?>
 <?php include "header.php"; ?>
 
-	<div class="loginform fix">
-		<div class="msg "><h3><i class="fa fa-user" aria-hidden="true"></i>  Admin login</h3></div>
+	<div style="background-color: grey" class="loginform fix">
+		<div class="msg "><h3><i class="fa fa-user" aria-hidden="true"></i>  Cordinator login</h3></div>
 		<div class="access">
 			<?php
 					if($_SERVER['REQUEST_METHOD'] == "POST"){

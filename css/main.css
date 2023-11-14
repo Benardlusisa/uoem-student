@@ -86,7 +86,7 @@ textarea {
 
 .browserupgrade {
     margin: 0.2em 0;
-    background: #ccc;
+    background: rgb(223, 214, 241);
     color: #000;
     padding: 0.2em 0;
 }
@@ -114,7 +114,7 @@ body{
 }
 .header_area{
 	height:80px;
-	background:#2A2B3C;
+	background:#ee0909;
 }
 
 .head {
@@ -183,7 +183,7 @@ body{
 
 }
 .menu>ul>li a:hover {
-	color:#0BB69F;
+	color:#b60b52;
 }
 
 .sidebar {
@@ -199,7 +199,7 @@ body{
 }
 .sidebar>ul>li{
 	font-size:18px;
-	background:#0CC2AA;
+	background:#e72a2a;
 	color: #e3e3e5;
 	padding:5px 5px;
 	border-radius:5px;
@@ -247,7 +247,7 @@ body{
     margin-top: 145px;
     margin-left: 215px;
 }
-}
+
 
 .msg{
 
@@ -263,7 +263,7 @@ body{
   text-align: center;
 }
 .loginform a{
-  color:#0ea17f;
+  color:rgb(241, 114, 135);
 }
 .loginform input[type="text"], .loginform input[type="password"] {
   padding: 7px 5px;
@@ -280,10 +280,10 @@ body{
 }
 .loginform input[type="text"]:focus, .loginform input[type="password"]:focus {
   outline: none;
-  box-shadow: 0 0 1px 1px #1abc9c;
+  box-shadow: 0 0 1px 1px #bc1a42;
 }
 .loginform input[type="submit"] {
-  background: #1abc9c;
+  background: #bc1a1a;
   padding: 10px;
   font-size: 20px;
   display: block;
@@ -293,7 +293,7 @@ body{
   border-radius: 5px;
 }
 .loginform input[type="submit"]:hover {
-  background: #1bc6a4;
+  background: #c61b29;
 }
 /*login form ends*/
 
@@ -310,7 +310,7 @@ body{
 	margin:0;
 	margin-bottom:20px;
 	padding:10px 0;
-	background:#1abc9c;
+	background:#bc1a35;
 	font-weight:normal;
     font-family:consolas, arial;
 	text-align:center;
@@ -323,20 +323,20 @@ body{
 .st_reg select{
 	width:80px;
 	padding:2px;
-	border: 1px solid #1abc9c;
+	border: 1px solid #bc1a1a;
 	border-radius: 5px;
 	
 }
 .birthday{
 	width:48px;
 	padding:2px;
-	border: 1px solid #1abc9c;
+	border: 1px solid #bc1a35;
 	border-radius: 5px;
 }
 .birthyear{
 	width:70px;
 	padding:2px;
-	border: 1px solid #1abc9c;
+	border: 1px solid #bc1a1a;
 	border-radius: 5px;
 }
 .st_reg input[type="text"], .st_reg input[type="password"], .st_reg input[type="email"] {
@@ -346,7 +346,7 @@ body{
   display: block;
   font-size: 16px;
   border-radius: 5px;
-  border: 1px solid #1abc9c;
+  border: 1px solid #bc1a1a;
   -webkit-transition: 0.3s linear;
   -moz-transition: 0.3s linear;
   -o-transition: 0.3s linear;
@@ -354,10 +354,10 @@ body{
 }
 .st_reg input[type="text"]:focus, .st_reg input[type="password"]:focus, .st_reg input[type="email"]:focus  {
   outline: none;
-  box-shadow: 0 0 1px 1px #1abc9c;
+  box-shadow: 0 0 1px 1px #bc1a22;
 }
 .st_reg input[type="submit"] {
-  background: #1abc9c;
+  background: #bc1a1a;
   padding: 8px;
   font-size: 16px;
   display: block;
@@ -367,7 +367,7 @@ body{
   border-radius: 5px;
 }
 .st_reg input[type="submit"]:hover {
-  background: #1bc6a4;
+  background: #c61b1b;
 }
 /*Table desing for view info*/
 /*page desing*/

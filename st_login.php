@@ -13,8 +13,8 @@ if($user->getsession()){
 $pageTitle = "Student login";
 include "header.php";
 ?>
-	<div class="loginform fix">
-		<div class="msg"><h3><i class="fa fa-graduation-cap" aria-hidden="true"></i>Student login</h3></div>
+	<div  class="loginform fix">
+		<div class="msg"><h3><i class="fa fa-user" aria-hidden="true"></i>  Login</h3></div>
 		<div class="access">
 		
 		<?php
@@ -39,7 +39,7 @@ include "header.php";
 			<form action="" method="post">
 				<input type="text" name="st_id" placeholder="Student ID" />
 				<input type="password" name="st_pass" placeholder="password" />
-				<input type="submit" value="Login" />
+				<input type="submit" value="Login" style="background-color: grey" />
 			</form>
 		</div>
 		<p>Not Registered? <a href="st_reg.php">Create an account</a></p>

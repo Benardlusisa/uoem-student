@@ -55,9 +55,7 @@ include "php/headertop.php";
 		<input type="submit" value="View Result" />
 
 	</form>
-	<div class="fix">
-	<p style="float:left;margin:0 0 3px 0;width:100%;text-align:center;"><a href="view_single_cgpa.php?vr=<?php echo $stid; ?>&vn=<?php echo $name; ?>"><button class="editbtn">View CGPA & Complete Course</button></a></p>
-	</div>
+	
 	<?php
 	//select semester
 			if($_SERVER['REQUEST_METHOD'] == 'POST'){

@@ -11,8 +11,8 @@ if($user->getsession()){
 $pageTitle = "Student Registration";
 include "header.php";
 ?>
-	<div class="st_reg fix">
-		<h2>Student Registration Form</h2>
+	<div style="background-color: brown" class="st_reg fix">
+		<h2 style="background-color: grey">Student Registration Form</h2>
 		<p class="msg">
 				<?php
 					if($_SERVER['REQUEST_METHOD'] == "POST"){
@@ -125,7 +125,7 @@ include "header.php";
 					<td><input type="text" name="st_add" placeholder="Address" required /></td>
 				</tr>
 				<tr>
-					<td colspan="2"><input type="submit" name="sub" value="Register" /></td>
+					<td colspan="2"><input type="submit" name="sub" value="Register" style="background-color: grey" /></td>
 				</tr>
 			</table>
 		</form>

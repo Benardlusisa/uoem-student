@@ -21,8 +21,8 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <header class="container header_area fix" style="background-color: skyblue">
-			<div id="sticker" style="background-color: skyblue">
+        <header class="container header_area fix" style="background-color: brown">
+			<div id="sticker" style="background-color: brown">
 				<div class="head">
 					<a href="#"><div class="logo fix">
 						<!-- <img src="img/logo.png" alt="" /> -->
@@ -43,22 +43,17 @@
 			</div>
 		</header>
 		<div class="maincontent container fix">
-			<div id="stickerside" style="background-color: skyblue">
-				<div class="sidebar fix" style="background-color: skyblue">
+			<div id="stickerside" style="background-color: brown">
+				<div class="sidebar fix" style="background-color: brown">
 						<ul style="margin-right: 20px;">
-							<li><span class="spcl"><i class="fa fa-server" aria-hidden="true"></i> Administrator</span></li>
+							<li style="background-color: grey"><span class="spcl"><i class="fas fa-crown" aria-hidden="true"></i> Exam cordinator</span></li>
 								<ul>
 									<li><a href="index.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
 								</ul>
 							
-							<li><span class="spcl"><i class="fa fa-male" aria-hidden="true"></i> Faculty Area</span></li>
-								<ul>
-									<li><a href="facultylogin.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
-									<li><a href="fct_single_profile.php"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
-									<li><a href="class_att.php"><i class="fa fa-database" aria-hidden="true"></i> Class Attendance</a></li>
-								</ul>
 							
-							<li><span class="spcl"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Student Area</span></li>
+							
+							<li style="background-color: grey"><span class="spcl"><i class="fa a-graduation-cap" aria-hidden="true"></i> Students</span></li>
 								<ul>
 									<li><a href="st_login.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
 									<li><a href="st_reg.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a></li>
